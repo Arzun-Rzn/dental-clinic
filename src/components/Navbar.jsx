@@ -1,10 +1,7 @@
-import { useState } from "react";
 import "../styles/Navbar.css";
+import { Phone } from "lucide-react";
 
 function Navbar() {
-  const [showSpecialities, setShowSpecialities] = useState(false);
-  const [showTreatments, setShowTreatments] = useState(false);
-
   const specialities = [
     "Cosmetic Dentistry",
     "Aesthetic Restorations",
@@ -42,56 +39,52 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-        <div className="navbar-container">
+      <div className="navbar-container">
+        
         {/* LEFT */}
         <div className="navbar-left">
-            <div className="logo">🦷</div>
-            <h2 className="title">DentalCare</h2>
+          <div className="logo">DC</div>
+          <h2 className="title">DentalCare</h2>
         </div>
 
         {/* CENTER */}
         <ul className="navbar-links">
-            <li>About</li>
+          <li>About</li>
 
-            <li
-            className="dropdown"
-            onMouseEnter={() => setShowSpecialities(true)}
-            onMouseLeave={() => setShowSpecialities(false)}
-            >
-            Specialities
-            {showSpecialities && (
-                <div className="dropdown-menu">
-                {specialities.map((item, index) => (
-                    <span key={index}>{item}</span>
-                ))}
-                </div>
-            )}
-            </li>
+          {/* SPECIALITIES */}
+          <li className="dropdown-wrapper">
+            <span className="nav-item">Specialities</span>
+            <div className="dropdown-menu">
+              {specialities.map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </div>
+          </li>
 
-            <li
-            className="dropdown"
-            onMouseEnter={() => setShowTreatments(true)}
-            onMouseLeave={() => setShowTreatments(false)}
-            >
-            Treatments
-            {showTreatments && (
-                <div className="dropdown-menu">
-                {treatments.map((item, index) => (
-                    <span key={index}>{item}</span>
-                ))}
-                </div>
-            )}
-            </li>
+          {/* TREATMENTS */}
+          <li className="dropdown-wrapper">
+            <span className="nav-item">Treatments</span>
+            <div className="dropdown-menu">
+              {treatments.map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </div>
+          </li>
 
-            <li>Feedbacks</li>
-            <li>Contact</li>
+          <li>Feedbacks</li>
+          <li>Contact</li>
         </ul>
 
         {/* RIGHT */}
         <div className="navbar-right">
-            <span className="phone">+91 98765 43210</span>
+            <div className="phone">
+                <Phone size={16} />
+                <span>+91 98765 43210</span>
+            </div>
+
             <button className="book-btn">Book Now</button>
         </div>
+
       </div>
     </nav>
   );
