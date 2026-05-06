@@ -1,0 +1,83 @@
+.specialities {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.specialities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* HEADING */
+.specialities h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0a2540;
+}
+
+.specialities h2 span {
+  color: #0077ff;
+}
+
+.specialities p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.specialities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid #e6e9ee;
+
+  background: #fff;
+  text-align: center;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* ICON */
+.icon {
+  margin-bottom: 15px;
+  color: #0077ff;
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* DESC */
+.card span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* 🔥 HOVER ANIMATION */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background-color: #f0f0f0;
+  border-color: transparent;
+}
+
+/* ICON ANIMATION */
+.card:hover .icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
