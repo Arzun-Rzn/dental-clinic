@@ -1,0 +1,152 @@
+/* GLOBAL FONT (add this in App.css if not already) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+/* NAVBAR WRAPPER */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* CONTAINER (VERY IMPORTANT) */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+/* CENTER */
+.navbar-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar-links li {
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.navbar-links li:hover {
+  color: #0077ff;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 8px 20px;
+
+  min-width: 280px;
+  max-width: 420px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu span {
+  font-size: 13px;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu span:hover {
+  color: #0077ff;
+  transform: translateX(3px);
+}
+
+/* RIGHT */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.phone {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  white-space: nowrap;
+}
+
+.book-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+
+  background: #0077ff;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.book-btn:hover {
+  background: #005fcc;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0, 119, 255, 0.25);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
