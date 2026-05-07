@@ -39,7 +39,7 @@
 .card {
   padding: 30px 20px;
   border-radius: 12px;
-  border: 1px solid #e6e9ee;
+  border: 2px solid #e6e6e6;
 
   background: #fff;
   text-align: center;
@@ -71,9 +71,8 @@
 /* 🔥 HOVER ANIMATION */
 .card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   background-color: #f0f0f0;
-  border-color: transparent;
+  border: 2px solid #c3c3c3;
 }
 
 /* ICON ANIMATION */
