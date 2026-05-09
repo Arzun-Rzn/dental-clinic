@@ -1,0 +1,110 @@
+.feedbacks {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.feedbacks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADING */
+.feedbacks h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 10px;
+}
+
+.feedbacks h2 span {
+  color: #0077ff;
+}
+
+.feedback-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+/* GRID */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.feedback-card {
+  padding: 28px;
+  border-radius: 14px;
+  background: #e8f3ff;
+  border: 2px solid #edf2f7;
+
+  transition: all 0.35s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: #dbeafe;
+  background-color: #ffffff;
+}
+
+/* HEADER */
+.feedback-header {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #0077ff, #00b4d8);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+
+  flex-shrink: 0;
+}
+
+/* NAME */
+.feedback-header h3 {
+  font-size: 22px;
+  color: #0a2540;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* STARS */
+.stars {
+  color: #f59e0b;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+/* TAG */
+.tag {
+  font-size: 13px;
+  color: #ff7b00;
+  font-weight: 600;
+}
+
+/* REVIEW */
+.review-text {
+  color: #444;
+  line-height: 1.8;
+  font-size: 16px;
+}
